@@ -25,7 +25,12 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              }
             ],
             "styles": [
               "src/styles.less"
@@ -123,6 +128,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Jackie-profile"
+    }
+  },
+  "defaultProject": "Jackie-profile",
+  "cli": {
+    "analytics": "d56b06d8-ba24-4c5a-9302-adb6758b8256"
+  }
 }
