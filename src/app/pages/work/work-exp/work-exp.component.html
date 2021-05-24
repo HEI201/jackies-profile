@@ -1,0 +1,21 @@
+<div>work experience</div>
+<div *ngFor="let exp of exps">
+  <div>{{exp.company}}
+    <span>
+      From
+      <span>
+        {{exp.st}}
+      </span>
+      to
+      <span>
+        {{exp.et}}
+      </span>
+    </span>
+  </div>
+  <div>
+    <div>
+      work content:
+    </div>
+    {{exp.workContent}}
+  </div>
+</div>

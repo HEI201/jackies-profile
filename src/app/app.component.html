@@ -1,34 +1,59 @@
 <nz-layout class="app-layout">
   <nz-sider class="menu-sidebar"
             nzCollapsible
-            nzWidth="256px"
+            nzWidth="200px"
             nzBreakpoint="md"
             [(nzCollapsed)]="isCollapsed"
             [nzTrigger]="null">
     <div class="sidebar-logo">
-      <a href="https://ng.ant.design/" target="_blank">
-        <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
-        <h1>Ant Design Of Angular</h1>
+      <a href="#">
+        <img src="./assets/images/avatar.jpg"
+             alt="avatar">
+        <h1>Jackie's profile</h1>
       </a>
     </div>
-    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-      <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard">
+    <ul nz-menu
+        nzTheme="dark"
+        nzMode="inline"
+        [nzInlineCollapsed]="isCollapsed">
+      <li nz-submenu
+          nzOpen
+          nzTitle="Profile"
+          nzIcon="profile">
         <ul>
-          <li nz-menu-item nzMatchRouter>
+          <li nz-menu-item
+              nzMatchRouter>
             <a routerLink="/welcome">Welcome</a>
           </li>
-          <li nz-menu-item nzMatchRouter>
-            <a>Monitor</a>
+          <li nz-menu-item
+              nzMatchRouter>
+            <a routerLink="/life">Life</a>
           </li>
-          <li nz-menu-item nzMatchRouter>
-            <a>Workplace</a>
+          <li nz-menu-item
+              nzMatchRouter>
+            <a routerLink="/work">Work</a>
           </li>
         </ul>
       </li>
-      <li nz-submenu nzOpen nzTitle="Form" nzIcon="form">
+      <li nz-submenu
+          nzOpen
+          nzTitle="Contact"
+          nzIcon="mail">
         <ul>
-          <li nz-menu-item nzMatchRouter>
-            <a>Basic Form</a>
+          <li nz-menu-item
+              nzMatchRouter>
+            <a routerLink="/contact">contact me</a>
+          </li>
+        </ul>
+      </li>
+      <li nz-submenu
+          nzOpen
+          nzTitle="About"
+          nzIcon="mail">
+        <ul>
+          <li nz-menu-item
+              nzMatchRouter>
+            <a routerLink="/about">About</a>
           </li>
         </ul>
       </li>
@@ -37,11 +62,11 @@
   <nz-layout>
     <nz-header>
       <div class="app-header">
-        <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
-            <i class="trigger"
-               nz-icon
-               [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
-            ></i>
+        <span class="header-trigger"
+              (click)="isCollapsed = !isCollapsed">
+          <i class="trigger"
+             nz-icon
+             [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
         </span>
       </div>
     </nz-header>
